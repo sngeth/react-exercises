@@ -1,4 +1,4 @@
-Rmport React from 'react'
+import React from 'react'
 import Greeter from './Greeter'
 
 class HelloForm extends React.Component {
