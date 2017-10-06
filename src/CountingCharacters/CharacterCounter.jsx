@@ -25,7 +25,6 @@ class CharacterCounter extends React.Component {
             What is the input string?
             <input type="text" onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
         </form>
 
         { this.state.string.length !== 0 ? <p>{this.state.string} has {this.state.count} characters.</p> : null }

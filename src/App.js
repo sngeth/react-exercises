@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloForm from './SayingHello/HelloForm';
 import CharacterCounter from './CountingCharacters/CharacterCounter';
+import Quoter from './PrintingQuotes/Quoter';
 import { Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
@@ -15,12 +16,22 @@ class App extends Component {
         </header>
 
         <main>
-          <Link to={{ pathname: '/saying_hello' }}>Saying Hello</Link>&nbsp;|&nbsp;
-          <Link to={{ pathname: '/counting_characters' }}>Counting Characters</Link>
+          <nav class="nav">
+            <Link className="nav-link" to={{ pathname: '/saying_hello' }}>
+              Saying Hello
+            </Link>
+            <Link className="nav-link" to={{ pathname: '/counting_characters' }}>
+              Counting Characters
+            </Link>
+            <Link className="nav-link" to={{ pathname: '/printing_quotes' }}>
+              Printing Quotes
+            </Link>
+          </nav>
 
           <Switch>
             <Route path='/saying_hello' component={HelloForm}/>
             <Route path='/counting_characters' component={CharacterCounter}/>
+            <Route path='/printing_quotes' component={Quoter}/>
           </Switch>
         </main>
       </div>
