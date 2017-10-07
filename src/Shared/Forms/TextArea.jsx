@@ -13,4 +13,4 @@ const TextArea = ({label, onChange}) => {
   )
 }
 
-export default TextArea ;
+export default TextArea;

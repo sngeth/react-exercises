@@ -1,5 +1,6 @@
 import React from 'react';
 import TextArea from '../Shared/Forms/TextArea';
+import Button from '../Shared/Forms/Button';
 
 class MadLib extends React.Component {
   render() {
@@ -8,10 +9,9 @@ class MadLib extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <TextArea label="Enter a noun:" />
           <TextArea label="Enter a verb:" />
-          <TextArea label="Enter a adjective:" />
-          <TextArea label="Enter a adverb :" />
-
-          <button className="btn btn-primary" type="submit" value="Submit">Submit</button>
+          <TextArea label="Enter an adjective:" />
+          <TextArea label="Enter an adverb :" />
+          <Button label="Submit" />
         </form>
       </div>
     )

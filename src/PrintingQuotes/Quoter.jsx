@@ -1,6 +1,7 @@
 import React from 'react'
 import QuotePrinter from './QuotePrinter'
 import TextArea from '../Shared/Forms/TextArea';
+import Button from '../Shared/Forms/Button';
 
 class Quoter extends React.Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class Quoter extends React.Component {
           <TextArea label="Who said it?"
             onChange={this.handleAuthorChange} />
 
-          <button className="btn btn-primary" type="submit" value="Submit">Submit</button>
+          <Button label="Submit" />
         </form>
         { this.state.submitted ?
           <QuotePrinter author={this.state.author} quote={this.state.quote} />
