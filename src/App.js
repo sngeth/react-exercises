@@ -4,6 +4,7 @@ import './App.css';
 import HelloForm from './SayingHello/HelloForm';
 import CharacterCounter from './CountingCharacters/CharacterCounter';
 import Quoter from './PrintingQuotes/Quoter';
+import MadLib from './MadLib/MadLib';
 import { Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
@@ -26,12 +27,16 @@ class App extends Component {
             <Link className="nav-link" to={{ pathname: '/printing_quotes' }}>
               Printing Quotes
             </Link>
+            <Link className="nav-link" to={{ pathname: '/mad_lib' }}>
+              Mad Lib
+            </Link>
           </nav>
 
           <Switch>
             <Route path='/saying_hello' component={HelloForm}/>
             <Route path='/counting_characters' component={CharacterCounter}/>
             <Route path='/printing_quotes' component={Quoter}/>
+            <Route path='/mad_lib' component={MadLib}/>
           </Switch>
         </main>
       </div>

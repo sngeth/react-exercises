@@ -1,5 +1,6 @@
 import React from 'react'
 import Greeter from './Greeter'
+import TextArea from '../Shared/Forms/TextArea';
 
 class HelloForm extends React.Component {
   constructor(props) {
@@ -22,10 +23,7 @@ class HelloForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            What is your name?
-            <input type="text" onChange={this.handleChange} />
-          </label>
+          <TextArea label="What is your name?" onChange={this.handleChange} />
           <input type="submit" value="Submit" />
         </form>
 
