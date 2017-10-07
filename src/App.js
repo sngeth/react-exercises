@@ -17,7 +17,7 @@ class App extends Component {
         </header>
 
         <main>
-          <nav class="nav">
+          <nav className="nav">
             <Link className="nav-link" to={{ pathname: '/saying_hello' }}>
               Saying Hello
             </Link>
