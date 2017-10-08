@@ -1,7 +1,7 @@
 import React from 'react'
-import QuotePrinter from './QuotePrinter'
 import TextArea from '../Shared/Forms/TextArea';
 import Button from '../Shared/Forms/Button';
+import Alert from '../Shared/Alert';
 
 class Quoter extends React.Component {
   constructor(props) {
@@ -25,9 +25,17 @@ class Quoter extends React.Component {
     event.preventDefault();
   }
 
+  printQuote() {
+    let {author, quote} = this.state;
+    return <Alert content={`${author} says, ${quote}`} />
+  }
+
   render() {
     return (
       <div>
+        { this.state.submitted ?
+            this.printQuote() : null
+        }
         <form onSubmit={this.handleSubmit}>
           <TextArea label="What is the quote?"
             onChange={this.handleQuoteChange} />
@@ -37,10 +45,6 @@ class Quoter extends React.Component {
 
           <Button label="Submit" />
         </form>
-        { this.state.submitted ?
-          <QuotePrinter author={this.state.author} quote={this.state.quote} />
-          : null
-        }
       </div>
     );
   }
