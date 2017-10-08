@@ -1,5 +1,5 @@
 import React from 'react'
-import TextInput from '../Shared/Forms/TextInput';
+import TextArea from '../Shared/Forms/TextArea';
 
 class CharacterCounter extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class CharacterCounter extends React.Component {
     return (
       <div>
         <form>
-          <TextInput label="What is the input string?"
+          <TextArea label="What is the input string?"
             onChange={this.handleChange} />
         </form>
 

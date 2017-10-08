@@ -8,4 +8,6 @@ const Button = ({label}) => {
   )
 }
 
+Button.defaultProps = { label: 'Submit' }
+
 export default Button;
