@@ -1,7 +1,7 @@
 import React from 'react'
-import Greeter from './Greeter'
 import TextInput from '../Shared/Forms/TextInput';
 import Button from '../Shared/Forms/Button';
+import Alert from '../Shared/Alert';
 
 class HelloForm extends React.Component {
   constructor(props) {
@@ -23,7 +23,10 @@ class HelloForm extends React.Component {
   render() {
     return (
       <div>
-        { this.state.submitted ? <Greeter name={this.state.name} /> : null }
+        { this.state.submitted ?
+            <Alert content={`Hello, ${this.state.name}`} />
+            : null
+        }
 
         <form onSubmit={this.handleSubmit}>
           <TextInput label="What is your name?" onChange={this.handleChange} />

@@ -1,6 +1,7 @@
 import React from 'react';
-import TextArea from '../Shared/Forms/TextArea';
+import TextInput from '../Shared/Forms/TextInput';
 import Button from '../Shared/Forms/Button';
+import Alert from '../Shared/Alert';
 
 class MadLib extends React.Component {
   constructor(props) {
@@ -35,27 +36,28 @@ class MadLib extends React.Component {
 
   printMadLib() {
     let { noun, verb, adjective, adverb} = this.state;
-    return `Do you ${verb} your ${adjective} ${noun} ${adverb}? That's hilarious`
+    return `Do you ${verb} your ${adjective} ${noun} ${adverb}? That's hilarious!`
   }
 
   render() {
     return (
       <div>
+        { this.state.submitted ?
+            <Alert content={this.printMadLib()} />
+            : null
+        }
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <TextArea label="Enter a noun:"
+          <TextInput label="Enter a noun:"
             onChange={this.handleNounChange.bind(this)} />
-          <TextArea label="Enter a verb:"
+          <TextInput label="Enter a verb:"
             onChange={this.handleVerbChange.bind(this)} />
-          <TextArea label="Enter an adjective:"
+          <TextInput label="Enter an adjective:"
             onChange={this.handleAdjectiveChange.bind(this)} />
-          <TextArea label="Enter an adverb :"
+          <TextInput label="Enter an adverb :"
             onChange={this.handleAdverbChange.bind(this)} />
           <Button label="Submit" />
         </form>
 
-        { this.state.submitted ?
-          this.printMadLib() : null
-        }
       </div>
     )
   }
