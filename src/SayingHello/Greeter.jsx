@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Greeter = ({name}) => {
-  return <h3>Hello, {name}</h3>;
+  return (
+    <div className="alert alert-primary" role="alert">
+      Hello, {name}
+    </div>
+  )
 }
 
 export default Greeter;

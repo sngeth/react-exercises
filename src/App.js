@@ -15,30 +15,29 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <nav className="nav">
+          <Link className="nav-link" to={{ pathname: '/saying_hello' }}>
+            Saying Hello
+          </Link>
+          <Link className="nav-link" to={{ pathname: '/counting_characters' }}>
+            Counting Characters
+          </Link>
+          <Link className="nav-link" to={{ pathname: '/printing_quotes' }}>
+            Printing Quotes
+          </Link>
+          <Link className="nav-link" to={{ pathname: '/mad_lib' }}>
+            Mad Lib
+          </Link>
+        </nav>
 
-        <main>
-          <nav className="nav">
-            <Link className="nav-link" to={{ pathname: '/saying_hello' }}>
-              Saying Hello
-            </Link>
-            <Link className="nav-link" to={{ pathname: '/counting_characters' }}>
-              Counting Characters
-            </Link>
-            <Link className="nav-link" to={{ pathname: '/printing_quotes' }}>
-              Printing Quotes
-            </Link>
-            <Link className="nav-link" to={{ pathname: '/mad_lib' }}>
-              Mad Lib
-            </Link>
-          </nav>
-
+        <div className="container">
           <Switch>
             <Route path='/saying_hello' component={HelloForm}/>
             <Route path='/counting_characters' component={CharacterCounter}/>
             <Route path='/printing_quotes' component={Quoter}/>
             <Route path='/mad_lib' component={MadLib}/>
           </Switch>
-        </main>
+        </div>
       </div>
     );
   }

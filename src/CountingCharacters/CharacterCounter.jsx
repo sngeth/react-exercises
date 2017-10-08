@@ -1,4 +1,5 @@
 import React from 'react'
+import TextInput from '../Shared/Forms/TextInput';
 
 class CharacterCounter extends React.Component {
   constructor(props) {
@@ -21,10 +22,8 @@ class CharacterCounter extends React.Component {
     return (
       <div>
         <form>
-          <label>
-            What is the input string?
-            <input type="text" onChange={this.handleChange} />
-          </label>
+          <TextInput label="What is the input string?"
+            onChange={this.handleChange} />
         </form>
 
         { this.state.string.length !== 0 ? <p>{this.state.string} has {this.state.count} characters.</p> : null }

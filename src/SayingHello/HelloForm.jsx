@@ -1,6 +1,6 @@
 import React from 'react'
 import Greeter from './Greeter'
-import TextArea from '../Shared/Forms/TextArea';
+import TextInput from '../Shared/Forms/TextInput';
 import Button from '../Shared/Forms/Button';
 
 class HelloForm extends React.Component {
@@ -23,12 +23,12 @@ class HelloForm extends React.Component {
   render() {
     return (
       <div>
+        { this.state.submitted ? <Greeter name={this.state.name} /> : null }
+
         <form onSubmit={this.handleSubmit}>
-          <TextArea label="What is your name?" onChange={this.handleChange} />
+          <TextInput label="What is your name?" onChange={this.handleChange} />
           <Button label="Submit" />
         </form>
-
-        { this.state.submitted ? <Greeter name={this.state.name} /> : null }
       </div>
     );
   }
