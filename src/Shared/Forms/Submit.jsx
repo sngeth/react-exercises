@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({label}) => {
+const Submit = ({label}) => {
   return (
     <button className="btn btn-primary" type="submit">
       { label }
@@ -8,6 +8,6 @@ const Button = ({label}) => {
   )
 }
 
-Button.defaultProps = { label: 'Submit' }
+Submit.defaultProps = { label: 'Submit' }
 
-export default Button;
+export default Submit;

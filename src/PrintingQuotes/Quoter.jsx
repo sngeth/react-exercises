@@ -1,6 +1,6 @@
 import React from 'react'
 import TextArea from '../Shared/Forms/TextArea';
-import Button from '../Shared/Forms/Button';
+import Submit from '../Shared/Forms/Submit';
 import Alert from '../Shared/Alert';
 
 class Quoter extends React.Component {
@@ -27,7 +27,10 @@ class Quoter extends React.Component {
 
   printQuote() {
     let {author, quote} = this.state;
-    return <Alert content={`${author} says, ${quote}`} />
+
+    return (<Alert>
+      <p>{author} says, "{quote}"</p>
+    </Alert>)
   }
 
   render() {
@@ -43,11 +46,11 @@ class Quoter extends React.Component {
           <TextArea label="Who said it?"
             onChange={this.handleAuthorChange} />
 
-          <Button label="Submit" />
+          <Submit />
         </form>
       </div>
     );
   }
 }
 
-export default Quoter
+export default Quoter;

@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Alert = ({content, type}) => {
+const Alert = ({type, children}) => {
   return (
-    <div className={`alert ${type}`} role="alert">{content}</div>
+    <div className={`alert ${type}`} role="alert">
+      {children}
+    </div>
   )
 }
 

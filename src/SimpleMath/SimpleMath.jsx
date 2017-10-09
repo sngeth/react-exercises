@@ -1,6 +1,6 @@
 import React from 'react';
 import TextInput from '../Shared/Forms/TextInput';
-import Button from '../Shared/Forms/Button';
+import Submit from '../Shared/Forms/Submit';
 
 class SimpleMath extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class SimpleMath extends React.Component {
   }
 
   add({first, second}) {
-    let result = parseInt(first) + parseInt(second);
+    let result = parseInt(first, 10) + parseInt(second, 10);
     return `${ first } + ${ second } is ${result}`;
   }
 
@@ -70,7 +70,7 @@ class SimpleMath extends React.Component {
           <TextInput label="What is the second number?"
             onChange={this.handleSecondChange.bind(this)} />
 
-          <Button />
+          <Submit />
         </form>
       </div>
     )

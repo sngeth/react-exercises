@@ -1,6 +1,6 @@
 import React from 'react'
 import TextInput from '../Shared/Forms/TextInput';
-import Button from '../Shared/Forms/Button';
+import Submit from '../Shared/Forms/Submit';
 import Alert from '../Shared/Alert';
 
 class HelloForm extends React.Component {
@@ -24,13 +24,15 @@ class HelloForm extends React.Component {
     return (
       <div>
         { this.state.submitted ?
-            <Alert content={`Hello, ${this.state.name}`} />
+            <Alert>
+              <p>{`Hello, ${this.state.name}`}</p>
+            </Alert>
             : null
         }
 
         <form onSubmit={this.handleSubmit}>
           <TextInput label="What is your name?" onChange={this.handleChange} />
-          <Button label="Submit" />
+          <Submit />
         </form>
       </div>
     );

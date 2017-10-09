@@ -6,6 +6,7 @@ import CharacterCounter from './CountingCharacters/CharacterCounter';
 import Quoter from './PrintingQuotes/Quoter';
 import MadLib from './MadLib/MadLib';
 import SimpleMath from './SimpleMath/SimpleMath';
+import RetirementCalculator from './RetirementCalculator/RetirementCalculator';
 import { Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
@@ -32,6 +33,9 @@ class App extends Component {
           <Link className="nav-link" to={{ pathname: '/simple_math' }}>
            Simple Math
           </Link>
+          <Link className="nav-link" to={{ pathname: '/retirement_calculator' }}>
+           Retirement Calculator
+          </Link>
         </nav>
 
         <div className="container">
@@ -41,6 +45,7 @@ class App extends Component {
             <Route path='/printing_quotes' component={Quoter}/>
             <Route path='/mad_lib' component={MadLib}/>
             <Route path='/simple_math' component={SimpleMath}/>
+            <Route path='/retirement_calculator' component={RetirementCalculator}/>
           </Switch>
         </div>
       </div>

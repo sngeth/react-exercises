@@ -1,6 +1,6 @@
 import React from 'react';
 import TextInput from '../Shared/Forms/TextInput';
-import Button from '../Shared/Forms/Button';
+import Submit from '../Shared/Forms/Submit';
 import Alert from '../Shared/Alert';
 
 class MadLib extends React.Component {
@@ -43,7 +43,9 @@ class MadLib extends React.Component {
     return (
       <div>
         { this.state.submitted ?
-            <Alert content={this.printMadLib()} />
+            <Alert>
+              <p>{this.printMadLib()}</p>
+            </Alert>
             : null
         }
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -55,7 +57,7 @@ class MadLib extends React.Component {
             onChange={this.handleAdjectiveChange.bind(this)} />
           <TextInput label="Enter an adverb :"
             onChange={this.handleAdverbChange.bind(this)} />
-          <Button label="Submit" />
+          <Submit />
         </form>
 
       </div>
