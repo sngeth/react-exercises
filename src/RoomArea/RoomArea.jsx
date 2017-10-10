@@ -18,11 +18,11 @@ export default class RoomArea extends React.Component {
 
 
   handleLengthChange(event) {
-    this.setState({length: event.target.value, submitted: false });
+    this.setState({length: event.target.value});
   }
 
   handleWidthChange(event) {
-    this.setState({width: event.target.value, submitted: false });
+    this.setState({width: event.target.value});
   }
 
   calcArea() {
