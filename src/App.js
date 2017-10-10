@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route, Link } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 import HelloForm from './SayingHello/HelloForm';
@@ -7,7 +8,7 @@ import Quoter from './PrintingQuotes/Quoter';
 import MadLib from './MadLib/MadLib';
 import SimpleMath from './SimpleMath/SimpleMath';
 import RetirementCalculator from './RetirementCalculator/RetirementCalculator';
-import { Switch, Route, Link } from 'react-router-dom'
+import RoomArea from './RoomArea/RoomArea';
 
 class App extends Component {
   render() {
@@ -36,6 +37,9 @@ class App extends Component {
           <Link className="nav-link" to={{ pathname: '/retirement_calculator' }}>
            Retirement Calculator
           </Link>
+          <Link className="nav-link" to={{ pathname: '/room_area' }}>
+           Area of a Rectangular Room
+          </Link>
         </nav>
 
         <div className="container">
@@ -46,6 +50,7 @@ class App extends Component {
             <Route path='/mad_lib' component={MadLib}/>
             <Route path='/simple_math' component={SimpleMath}/>
             <Route path='/retirement_calculator' component={RetirementCalculator}/>
+            <Route path='/room_area' component={RoomArea}/>
           </Switch>
         </div>
       </div>

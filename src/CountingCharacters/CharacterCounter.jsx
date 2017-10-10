@@ -21,7 +21,7 @@ class CharacterCounter extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form className="form-control">
           <TextArea label="What is the input string?"
             onChange={this.handleChange} />
         </form>

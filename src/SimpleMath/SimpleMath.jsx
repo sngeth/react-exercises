@@ -63,7 +63,7 @@ class SimpleMath extends React.Component {
       <div>
         { this.state.submitted ? this.showResults() : null }
 
-        <form onSubmit={this.handleSubmit}>
+        <form className="form-control" onSubmit={this.handleSubmit}>
           <TextInput label="What is the first number?"
             onChange={this.handleFirstChange.bind(this)} />
 

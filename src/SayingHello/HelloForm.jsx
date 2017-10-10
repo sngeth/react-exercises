@@ -30,7 +30,7 @@ class HelloForm extends React.Component {
             : null
         }
 
-        <form onSubmit={this.handleSubmit}>
+        <form className="form-control" onSubmit={this.handleSubmit}>
           <TextInput label="What is your name?" onChange={this.handleChange} />
           <Submit />
         </form>

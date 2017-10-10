@@ -48,7 +48,7 @@ class MadLib extends React.Component {
             </Alert>
             : null
         }
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form className="form-control" onSubmit={this.handleSubmit.bind(this)}>
           <TextInput label="Enter a noun:"
             onChange={this.handleNounChange.bind(this)} />
           <TextInput label="Enter a verb:"

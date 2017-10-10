@@ -39,7 +39,7 @@ class Quoter extends React.Component {
         { this.state.submitted ?
             this.printQuote() : null
         }
-        <form onSubmit={this.handleSubmit}>
+        <form className="form-control" onSubmit={this.handleSubmit}>
           <TextArea label="What is the quote?"
             onChange={this.handleQuoteChange} />
 

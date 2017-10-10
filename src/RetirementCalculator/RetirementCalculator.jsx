@@ -54,7 +54,7 @@ class RetirementCalculator extends React.Component {
           </Alert>
           : null
         }
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form className="form-control" onSubmit={this.handleSubmit.bind(this)}>
           <TextInput label="What is your current age?"
             onChange={this.handleAgeChange.bind(this)} />
           <TextInput label="At what age would you retire?"
