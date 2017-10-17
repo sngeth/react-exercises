@@ -9,6 +9,7 @@ import MadLib from './MadLib/MadLib';
 import SimpleMath from './SimpleMath/SimpleMath';
 import RetirementCalculator from './RetirementCalculator/RetirementCalculator';
 import RoomArea from './RoomArea/RoomArea';
+import PizzaParty from './PizzaParty/PizzaParty';
 
 class App extends Component {
   render() {
@@ -40,6 +41,7 @@ class App extends Component {
           <Link className="nav-link" to={{ pathname: '/room_area' }}>
            Area of a Rectangular Room
           </Link>
+          <Link className="nav-link" to={{ pathname: '/pizza_party' }}>Pizza Party</Link>
         </nav>
 
         <div className="container">
@@ -51,6 +53,7 @@ class App extends Component {
             <Route path='/simple_math' component={SimpleMath}/>
             <Route path='/retirement_calculator' component={RetirementCalculator}/>
             <Route path='/room_area' component={RoomArea}/>
+            <Route path='/pizza_party' component={PizzaParty}/>
           </Switch>
         </div>
       </div>
