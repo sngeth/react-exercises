@@ -10,6 +10,7 @@ import SimpleMath from './SimpleMath/SimpleMath';
 import RetirementCalculator from './RetirementCalculator/RetirementCalculator';
 import RoomArea from './RoomArea/RoomArea';
 import PizzaParty from './PizzaParty/PizzaParty';
+import PaintCalculator from './PaintCalculator/PaintCalculator';
 
 class App extends Component {
   render() {
@@ -42,6 +43,7 @@ class App extends Component {
            Area of a Rectangular Room
           </Link>
           <Link className="nav-link" to={{ pathname: '/pizza_party' }}>Pizza Party</Link>
+          <Link className="nav-link" to={{ pathname: '/paint_calculator' }}>Paint Calculator</Link>
         </nav>
 
         <div className="container">
@@ -54,6 +56,7 @@ class App extends Component {
             <Route path='/retirement_calculator' component={RetirementCalculator}/>
             <Route path='/room_area' component={RoomArea}/>
             <Route path='/pizza_party' component={PizzaParty}/>
+            <Route path='/paint_calculator' component={PaintCalculator}/>
           </Switch>
         </div>
       </div>
