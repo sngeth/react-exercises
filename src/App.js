@@ -12,6 +12,7 @@ import RetirementCalculator from './RetirementCalculator/RetirementCalculator';
 import RoomArea from './RoomArea/RoomArea';
 import PizzaParty from './PizzaParty/PizzaParty';
 import PaintCalculator from './PaintCalculator/PaintCalculator';
+import SelfCheckout from './SelfCheckout/SelfCheckout';
 
 class App extends Component {
   render() {
@@ -35,6 +36,7 @@ class App extends Component {
             <Route path='/room_area' component={RoomArea}/>
             <Route path='/pizza_party' component={PizzaParty}/>
             <Route path='/paint_calculator' component={PaintCalculator}/>
+            <Route path='/self_checkout' component={SelfCheckout}/>
           </div>
         </Switch>
       </div>
