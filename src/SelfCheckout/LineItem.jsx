@@ -5,7 +5,7 @@ class LineItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { price: 1, qty: 0 };
+    this.state = { price: 1, qty: 0, subtotal: 0 };
 
     this.handlePrice = this.handlePrice.bind(this);
     this.handleQty = this.handleQty.bind(this);
@@ -27,9 +27,9 @@ class LineItem extends React.Component {
   render() {
     return (
       <div>
-        <TextInput label={`Enter the price of item ${this.props.itemNum}`}
+        <TextInput label={`Enter the price of item ${this.props.itemNum}:`}
           onChange={this.handlePrice} />
-        <TextInput label={`Enter the quantity of item ${this.props.itemNum}`}
+        <TextInput label={`Enter the quantity of item ${this.props.itemNum}:`}
           onChange={this.handleQty} />
       </div>
     )

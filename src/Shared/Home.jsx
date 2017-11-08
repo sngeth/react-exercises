@@ -62,7 +62,7 @@ const Home = () => {
             <p className="card-text">Calculate paint needed to paint a room</p>
           </div>
           <div className="card">
-          <Link to={{ pathname: '/simple_checkout' }}>Self Checkout</Link>
+          <Link to={{ pathname: '/self_checkout' }}>Self Checkout</Link>
             <p className="card-text">Simple check-out system</p>
           </div>
         </div>
