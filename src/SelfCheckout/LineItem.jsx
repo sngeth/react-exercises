@@ -6,9 +6,6 @@ class LineItem extends React.Component {
     super(props);
 
     this.state = { price: 1, qty: 0, subtotal: 0 };
-
-    this.handlePrice = this.handlePrice.bind(this);
-    this.handleQty = this.handleQty.bind(this);
   }
 
   calcSubtotal() {
@@ -16,21 +13,17 @@ class LineItem extends React.Component {
     this.props.updateSubtotal(subtotal);
   }
 
-  handlePrice(event) {
-    this.setState({price: event.target.value}, this.calcSubtotal);
-  }
-
-  handleQty(event) {
-    this.setState({qty: event.target.value}, this.calcSubtotal);
+  handleChange(e) {
+    this.setState({[e.target.name]: e.target.value}, this.calcSubtotal);
   }
 
   render() {
     return (
       <div>
-        <TextInput label={`Enter the price of item ${this.props.itemNum}:`}
-          onChange={this.handlePrice} />
-        <TextInput label={`Enter the quantity of item ${this.props.itemNum}:`}
-          onChange={this.handleQty} />
+        <TextInput name="price" label={`Enter the price of item ${this.props.itemNum}:`}
+          onChange={this.handleChange.bind(this)} />
+        <TextInput name="qty" label={`Enter the quantity of item ${this.props.itemNum}:`}
+          onChange={this.handleChange.bind(this)} />
       </div>
     )
   }

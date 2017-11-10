@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextInput = ({label, onChange}) => {
+const TextInput = ({label, name, onChange}) => {
   return (
     <div className="form-group">
       <label>
@@ -8,6 +8,7 @@ const TextInput = ({label, onChange}) => {
       </label>
       <input className="form-control"
         type="text"
+        name={name}
         onChange={onChange}>
       </input>
     </div>
