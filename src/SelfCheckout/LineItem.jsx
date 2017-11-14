@@ -4,13 +4,23 @@ import TextInput from '../Shared/Forms/TextInput'
 class LineItem extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = { price: 1, qty: 0, subtotal: 0 };
+  }
+
+  componentWillMount() {
+    this.timer = null;
   }
 
   calcSubtotal() {
     let subtotal = this.state.price * this.state.qty;
-    this.props.updateSubtotal(subtotal);
+
+    if(subtotal === 0) {
+      this.props.updateSubtotal(-this.state.subtotal);
+      this.setState({subtotal: 0});
+    } else {
+      this.props.updateSubtotal(subtotal);
+      this.setState({subtotal});
+    }
   }
 
   handleChange(e) {

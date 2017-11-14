@@ -8,7 +8,6 @@ class SelfCheckout extends React.Component {
   }
 
   updateSubtotal = (lineItemSubtotal) => {
-    console.log(`line item subtotal is : ${lineItemSubtotal}`);
     this.setState({subtotal: this.state.subtotal + lineItemSubtotal });
   }
 
