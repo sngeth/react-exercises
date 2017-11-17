@@ -12,12 +12,8 @@ export default class PaintCalculator extends React.Component {
     this.state = { length: 0, width : 0, submitted: false}
   }
 
-  handleLengthChange(event) {
-    this.setState({length: event.target.value, submitted: false});
-  }
-
-  handleWidthChange(event) {
-    this.setState({width: event.target.value, submitted: false});
+  handleChange(e) {
+    this.setState({[e.target.name]: e.target.value});
   }
 
   handleSubmit(event) {
@@ -45,10 +41,10 @@ export default class PaintCalculator extends React.Component {
           : null
         }
         <form className="form-control" onSubmit={this.handleSubmit.bind(this)}>
-          <TextInput label="What is the length?"
-            onChange={this.handleLengthChange.bind(this)} />
-          <TextInput label="What is the width"
-            onChange={this.handleWidthChange.bind(this)} />
+          <TextInput name="length" label="What is the length?"
+            onChange={this.handleChange.bind(this)} />
+          <TextInput name="width" label="What is the width?"
+            onChange={this.handleChange.bind(this)} />
           <Submit />
         </form>
       </div>
