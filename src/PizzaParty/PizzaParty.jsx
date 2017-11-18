@@ -10,12 +10,8 @@ export default class PizzaParty extends React.Component {
     this.state = { people: 0, pizzas: 0, submitted: false}
   }
 
-  handlePeopleChange(event) {
-    this.setState({people: event.target.value, submitted: false});
-  }
-
-  handlePizzaChange(event) {
-    this.setState({pizzas: event.target.value, submitted: false});
+  handleChange(e) {
+    this.setState({[e.target.name]: e.target.value});
   }
 
   handleSubmit(event) {
@@ -47,10 +43,10 @@ export default class PizzaParty extends React.Component {
           : null
         }
         <form className="form-control" onSubmit={this.handleSubmit.bind(this)}>
-          <TextInput label="How many people?"
-            onChange={this.handlePeopleChange.bind(this)} />
-          <TextInput label="How many pizzas do you have?"
-            onChange={this.handlePizzaChange.bind(this)} />
+          <TextInput name="people" label="How many people?"
+            onChange={this.handleChange.bind(this)} />
+          <TextInput name="pizzas" label="How many pizzas do you have?"
+            onChange={this.handleChange.bind(this)} />
           <Submit />
         </form>
       </div>
