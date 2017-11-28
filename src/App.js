@@ -13,6 +13,7 @@ import RoomArea from './RoomArea/RoomArea';
 import PizzaParty from './PizzaParty/PizzaParty';
 import PaintCalculator from './PaintCalculator/PaintCalculator';
 import SelfCheckout from './SelfCheckout/SelfCheckout';
+import CurrencyConversion from './CurrencyConversion/CurrencyConversion';
 
 class App extends Component {
   render() {
@@ -37,6 +38,7 @@ class App extends Component {
             <Route path='/pizza_party' component={PizzaParty}/>
             <Route path='/paint_calculator' component={PaintCalculator}/>
             <Route path='/self_checkout' component={SelfCheckout}/>
+            <Route path='/currency_conversion' component={CurrencyConversion}/>
           </div>
         </Switch>
       </div>

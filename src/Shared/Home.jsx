@@ -66,6 +66,12 @@ const Home = () => {
             <Link to={{ pathname: '/self_checkout' }}>Self Checkout</Link>
               <p>Simple check-out system</p>
           </div>
+          <div className="col">
+            <Link to={{ pathname: '/currency_conversion' }}>Currency Conversion</Link>
+              <p>Convert Euros to USD</p>
+          </div>
+          <div className="col">
+          </div>
         </div>
       </div>
     </div>
