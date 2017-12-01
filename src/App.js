@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Home from './Shared/Home';
@@ -14,16 +14,17 @@ import PizzaParty from './PizzaParty/PizzaParty';
 import PaintCalculator from './PaintCalculator/PaintCalculator';
 import SelfCheckout from './SelfCheckout/SelfCheckout';
 import CurrencyConversion from './CurrencyConversion/CurrencyConversion';
+import SimpleInterest from './SimpleInterest/SimpleInterest';
 
 class App extends Component {
   render() {
     return (
       <div>
         <section className="jumbotron text-center">
-            <div className="container">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title">Welcome to React</h1>
-            </div>
+          <div className="container">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">Welcome to React</h1>
+          </div>
         </section>
         <Switch>
           <Route exact path='/' component={Home}/>
@@ -39,6 +40,7 @@ class App extends Component {
             <Route path='/paint_calculator' component={PaintCalculator}/>
             <Route path='/self_checkout' component={SelfCheckout}/>
             <Route path='/currency_conversion' component={CurrencyConversion}/>
+            <Route path='/simple_interest' component={SimpleInterest}/>
           </div>
         </Switch>
       </div>
