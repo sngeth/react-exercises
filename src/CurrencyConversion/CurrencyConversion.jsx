@@ -1,20 +1,19 @@
 import React from 'react';
 import TextInput from '../Shared/Forms/TextInput';
 import Submit from '../Shared/Forms/Submit';
-import Alert from '../Shared/Alert'
+import Alert from '../Shared/Alert';
 
-const RATE_TO = 0.841399
+const RATE_TO = 0.841399;
 
 export default class CurrencyConversion extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = { submitted: false,
       amount_to: 0.0,
       amount_from: 0.0,
-      rate_from: 0.0,
-      rate_to: 0.0
-    }
+      rate_from: 0.0
+    };
   }
 
   handleChange(e) {
@@ -27,7 +26,7 @@ export default class CurrencyConversion extends React.Component {
   }
 
   convert() {
-    const { amount_from, rate_from, rate_to } = this.state
+    const { amount_from, rate_from } = this.state;
     return ((amount_from * rate_from) / RATE_TO);
   }
 
@@ -52,6 +51,6 @@ export default class CurrencyConversion extends React.Component {
           <Submit />
         </form>
       </div>
-    )
+    );
   }
 }
