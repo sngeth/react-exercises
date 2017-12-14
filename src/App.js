@@ -15,6 +15,7 @@ import PaintCalculator from './PaintCalculator/PaintCalculator';
 import SelfCheckout from './SelfCheckout/SelfCheckout';
 import CurrencyConversion from './CurrencyConversion/CurrencyConversion';
 import SimpleInterest from './SimpleInterest/SimpleInterest';
+import CompoundInterest from './CompoundInterest/CompoundInterest';
 
 class App extends Component {
   render() {
@@ -41,6 +42,7 @@ class App extends Component {
             <Route path='/self_checkout' component={SelfCheckout}/>
             <Route path='/currency_conversion' component={CurrencyConversion}/>
             <Route path='/simple_interest' component={SimpleInterest}/>
+            <Route path='/compound_interest' component={CompoundInterest}/>
           </div>
         </Switch>
       </div>
