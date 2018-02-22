@@ -78,7 +78,7 @@ const Home = () => {
         <div className="row">
           <div className="col">
             <Link to={{ pathname: '/compound_interest' }}>Compound Interest</Link>
-            <p>Computes simple interest</p>
+            <p>Computes comound interest</p>
           </div>
         </div>
       </div>
