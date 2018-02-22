@@ -3,18 +3,19 @@ import { Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Home from './Shared/Home';
-import HelloForm from './SayingHello/HelloForm';
-import CharacterCounter from './CountingCharacters/CharacterCounter';
-import Quoter from './PrintingQuotes/Quoter';
-import MadLib from './MadLib/MadLib';
-import SimpleMath from './SimpleMath/SimpleMath';
-import RetirementCalculator from './RetirementCalculator/RetirementCalculator';
-import RoomArea from './RoomArea/RoomArea';
-import PizzaParty from './PizzaParty/PizzaParty';
-import PaintCalculator from './PaintCalculator/PaintCalculator';
-import SelfCheckout from './SelfCheckout/SelfCheckout';
-import CurrencyConversion from './CurrencyConversion/CurrencyConversion';
-import SimpleInterest from './SimpleInterest/SimpleInterest';
+import HelloForm from './Components/HelloForm';
+import CharacterCounter from './Components/CharacterCounter';
+import Quoter from './Components/Quoter';
+import MadLib from './Components/MadLib';
+import SimpleMath from './Components/SimpleMath';
+import RetirementCalculator from './Components/RetirementCalculator';
+import RoomArea from './Components/RoomArea';
+import PizzaParty from './Components/PizzaParty';
+import PaintCalculator from './Components/PaintCalculator';
+import SelfCheckout from './Components/SelfCheckout';
+import CurrencyConversion from './Components/CurrencyConversion';
+import SimpleInterest from './Components/SimpleInterest';
+import CompoundInterest from './Components/CompoundInterest';
 
 class App extends Component {
   render() {
@@ -41,6 +42,7 @@ class App extends Component {
             <Route path='/self_checkout' component={SelfCheckout}/>
             <Route path='/currency_conversion' component={CurrencyConversion}/>
             <Route path='/simple_interest' component={SimpleInterest}/>
+            <Route path='/compound_interest' component={CompoundInterest}/>
           </div>
         </Switch>
       </div>

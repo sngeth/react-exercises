@@ -75,6 +75,12 @@ const Home = () => {
             <p>Computes simple interest</p>
           </div>
         </div>
+        <div className="row">
+          <div className="col">
+            <Link to={{ pathname: '/compound_interest' }}>Compound Interest</Link>
+            <p>Computes simple interest</p>
+          </div>
+        </div>
       </div>
     </div>
   );
