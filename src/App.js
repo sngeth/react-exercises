@@ -16,6 +16,7 @@ import SelfCheckout from './Components/SelfCheckout';
 import CurrencyConversion from './Components/CurrencyConversion';
 import SimpleInterest from './Components/SimpleInterest';
 import CompoundInterest from './Components/CompoundInterest';
+import TaxCalculator from './Components/TaxCalculator';
 
 class App extends Component {
   render() {
@@ -43,6 +44,7 @@ class App extends Component {
             <Route path='/currency_conversion' component={CurrencyConversion}/>
             <Route path='/simple_interest' component={SimpleInterest}/>
             <Route path='/compound_interest' component={CompoundInterest}/>
+            <Route path='/tax_calculator' component={TaxCalculator}/>
           </div>
         </Switch>
       </div>
