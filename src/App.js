@@ -17,6 +17,7 @@ import CurrencyConversion from './Components/CurrencyConversion';
 import SimpleInterest from './Components/SimpleInterest';
 import CompoundInterest from './Components/CompoundInterest';
 import TaxCalculator from './Components/TaxCalculator';
+import PasswordValidation from './Components/PasswordValidation';
 
 class App extends Component {
   render() {
@@ -45,6 +46,7 @@ class App extends Component {
             <Route path='/simple_interest' component={SimpleInterest}/>
             <Route path='/compound_interest' component={CompoundInterest}/>
             <Route path='/tax_calculator' component={TaxCalculator}/>
+            <Route path='/password_validation' component={PasswordValidation}/>
           </div>
         </Switch>
       </div>

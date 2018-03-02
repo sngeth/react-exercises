@@ -85,6 +85,8 @@ const Home = () => {
             <p>Tax calculator</p>
           </div>
           <div className="col">
+            <Link to={{ pathname: '/password_validation' }}>Password Validation</Link>
+            <p>Password Validation</p>
           </div>
         </div>
       </div>

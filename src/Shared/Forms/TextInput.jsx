@@ -1,13 +1,13 @@
 import React from 'react';
 
-const TextInput = ({label, name, onChange}) => {
+const TextInput = ({label, name, type="text", onChange}) => {
   return (
     <div className="form-group">
       <label>
         {label}
       </label>
       <input className="form-control"
-        type="text"
+        type={type}
         name={name}
         onChange={onChange}>
       </input>
